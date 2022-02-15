@@ -21,6 +21,13 @@ Install Next Auth and Mongodb adapter
 npm install next-auth @next-auth/mongodb-adapter mongodb
 ```
 
+Install next theme & framer motion
+
+```
+npm install next-themes
+npm install framer-motion
+```
+
 ### Start server
 
 ```
@@ -34,3 +41,5 @@ npm run dev
 - Search Material Icons: [https://mui.com/components/material-icons/?query=home]
 - Next Auth: [https://next-auth.js.org/getting-started/upgrade-v4]
 - MongoDB Adapter: [https://next-auth.js.org/adapters/mongodb#usage]
+- Next Themes: [https://github.com/pacocoursey/next-themes]
+- Framer motion: [https://www.framer.com/showcase/]
