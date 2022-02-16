@@ -9,10 +9,12 @@ import { modalState, modalTypeState } from "../atoms/modalAtom";
 import { AnimatePresence } from "framer-motion";
 import Feed from "../components/Feed";
 import { connectToDatabase } from "../util/mongodb";
+import { useEffect, useState } from "react";
 
 export default function Home({ posts }) {
   const [modalOpen, setModalOpen] = useRecoilState(modalState);
   const [modalType, setModalType] = useRecoilState(modalTypeState);
+  const [isLoaded, setLoaded] = useState(false);
   const router = useRouter();
   const { status } = useSession({
     required: true,
@@ -22,7 +24,13 @@ export default function Home({ posts }) {
     },
   });
 
-  console.log(posts);
+  useEffect(() => {
+    setLoaded(true);
+  }, []);
+
+  if (!isLoaded) {
+    return <></>;
+  }
 
   return (
     <div className="bg-[#F3F2EF] dark:bg-black dark:text-white h-screen overflow-y-scroll md:space-y-6">
@@ -38,7 +46,7 @@ export default function Home({ posts }) {
           <Sidebar />
           <Feed posts={posts} />
         </div>
-        <AnimatePresence>
+        <AnimatePresence exitBeforeEnter>
           {modalOpen && (
             <Modal handleClose={() => setModalOpen(false)} type={modalType} />
           )}
