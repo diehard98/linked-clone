@@ -28,6 +28,12 @@ npm install next-themes
 npm install framer-motion
 ```
 
+Install Recoil
+
+```
+npm install recoil
+```
+
 ### Start server
 
 ```
@@ -43,3 +49,4 @@ npm run dev
 - MongoDB Adapter: [https://next-auth.js.org/adapters/mongodb#usage]
 - Next Themes: [https://github.com/pacocoursey/next-themes]
 - Framer motion: [https://www.framer.com/showcase/]
+- Recoil: [https://recoiljs.org/docs/introduction/getting-started/]
