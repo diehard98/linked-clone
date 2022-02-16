@@ -10,7 +10,7 @@ import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
 import ReplyRoundedIcon from "@mui/icons-material/ReplyRounded";
 import CommentOutlinedIcon from "@mui/icons-material/CommentOutlined";
 import { modalState, modalTypeState } from "../atoms/modalAtom";
-// import TimeAgo from "timeago-react";
+import TimeAgo from "timeago-react";
 import { useSession } from "next-auth/react";
 
 function Post({ post, modalPost }) {
@@ -34,6 +34,7 @@ function Post({ post, modalPost }) {
     setHandlePost(true);
     setModalOpen(false);
   };
+  console.log(post);
 
   return (
     <div
@@ -48,10 +49,10 @@ function Post({ post, modalPost }) {
             {post.username}
           </h6>
           <p className="text-sm dark:text-white/75 opacity-80">{post.email}</p>
-          {/* <TimeAgo
-            datetime={post.createdAt}
+          <TimeAgo
+            datetime={post.createdAt + "Z"}
             className="text-xs dark:text-white/75 opacity-80"
-          /> */}
+          />
         </div>
         {modalPost ? (
           <IconButton onClick={() => setModalOpen(false)}>

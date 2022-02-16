@@ -28,10 +28,11 @@ npm install next-themes
 npm install framer-motion
 ```
 
-Install Recoil
+Install Recoil & timeago-react
 
 ```
 npm install recoil
+npm install timeago-react
 ```
 
 ### Start server

@@ -25,7 +25,6 @@ function Feed({ posts }) {
     fetchPosts();
   }, [handlePost]);
 
-  console.log(realtimePosts);
   return (
     <div className="space-y-6 pb-24 max-w-lg">
       <Input />

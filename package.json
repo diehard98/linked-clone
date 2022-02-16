@@ -23,7 +23,8 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "recoil": "^0.6.1",
-    "tailwindcss": "^3.0.22"
+    "tailwindcss": "^3.0.22",
+    "timeago-react": "^3.0.4"
   },
   "devDependencies": {
     "eslint": "8.9.0",
